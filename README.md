@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Approach
+
+### API Integration
+- The application fetches skip data from the API defined in the `.env.local` file:
+  ```shell
+  REACT_APP_API_URL=""
+  The API call is made in the Home component, and the data is passed to the SkipList component for rendering.
+
+### Component Structure
+The project is organized into reusable components:
+Header: Displays the navigation header.
+Skiplist: Receives skip data and dynamically provides a collection of skipcard components. It acts as the main interface to present the available skip.
+SkipCard: The skipcard represents individual skip with relevant details such as price, yard cube size and hire period. Each card is styled and structured for clarity.
+Modal: Manages pop-up interactions using the useModal custom hook. Used for viewing detailed skip information.
+
+### Styling
+Tailwind CSS is used for styling, with configurations defined in tailwind.config.js.
+Custom Material-UI themes are applied for consistent design.
+
+### Routing
+React Router is used for navigation, with routes defined in App.
+
+### State Management
+Local state is managed using React's useState and useEffect hooks.
