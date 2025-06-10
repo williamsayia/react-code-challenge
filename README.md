@@ -92,4 +92,7 @@ Custom Material-UI themes are applied for consistent design.
 React Router is used for navigation, with routes defined in App.
 
 ### State Management
-Local state is managed using React's useState and useEffect hooks.
+Local state is managed using React's useState and useEffect hooks. The three states managed are skips-used to store the fetched skip data, loading-used for tracking the loading state and error-stores the error messages if the API call fails.
+
+### prop validation
+Added prop validation for efficient error handling. First is the skipcard which includes size, hire_period_days, price_before_vat, allowed_on_road, allow_backup_wastel. Lastly the skiplists which includes the skips, loading and the error.
